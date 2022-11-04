@@ -124,6 +124,11 @@ public class BookController {
 		return mav;
 	}
 	
+	@GetMapping("/testReqeust")
+	public String test() {
+		return "test";
+	}
+	
 	//방명록 열람 후 수정하기 버튼 누르면 수정화면으로 이동
 	@RequestMapping(value="/viewUpdateBook.do", method= {RequestMethod.POST, RequestMethod.GET})
 	public ModelAndView viewUpdateBook(@RequestParam("seq") String seq , HttpServletResponse response) throws Exception {
